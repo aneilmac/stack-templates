@@ -62,7 +62,7 @@ resolver: lts-15.12
 
 extra-deps:
   - github: FortOyer/worldturtle-haskell
-    commit: ccfc487f9373da2a0fd030f7230601c67009cde0
+    commit: 3dcc4f0277b03227367694c90b759a4493887153
     subdirs:
       - worldturtle
 
