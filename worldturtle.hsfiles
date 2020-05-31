@@ -16,9 +16,9 @@ executable {{name}}
   hs-source-dirs:      src
   main-is:             Main.hs
   default-language:    Haskell2010
-  build-depends: base >= 4.7 && < 5
+  build-depends: base >= 4.13 && < 5
                , gloss
-               , worldturtle >= 0.1 && < 0.2
+               , worldturtle >= 0.2 && < 0.3
 
 {-# START_FILE .vscode/tasks.json #-}
 {
@@ -52,9 +52,7 @@ module Main where
 import Graphics.WorldTurtle
 
 main :: IO ()
-main = runTurtle $ do
-  t <- makeTurtle
-  forward 90 t
+main = runTurtle $ forward 90
 
 {-# START_FILE stack.yaml #-}
 
@@ -62,7 +60,7 @@ resolver: lts-15.12
 
 extra-deps:
   - github: FortOyer/worldturtle-haskell
-    commit: 3dcc4f0277b03227367694c90b759a4493887153
+    commit: e2752c75ba6ffd2eee428a65e51b3df51295faf3
     subdirs:
       - worldturtle
 
