@@ -1,4 +1,6 @@
 {-# START_FILE {{name}}.cabal #-}
+cabal-version:       3.0.0
+
 name:                {{name}}
 version:             0.1.0.0
 -- synopsis:
@@ -10,7 +12,6 @@ maintainer:          {{author-email}}{{^author-email}}example@example.com{{/auth
 copyright:           {{copyright}}{{^copyright}}{{year}}{{^year}}2020{{/year}} {{author-name}}{{^author-name}}Author name here{{/author-name}}{{/copyright}}
 category:            {{category}}{{^category}}Web{{/category}}
 build-type:          Simple
-cabal-version:       >=1.10
 
 executable {{name}}
   hs-source-dirs:      src
@@ -56,11 +57,11 @@ main = runTurtle $ forward 90
 
 {-# START_FILE stack.yaml #-}
 
-resolver: lts-18.8
+resolver: lts-17.2
 
 extra-deps:
   - github: FortOyer/worldturtle-haskell
-    commit: e2752c75ba6ffd2eee428a65e51b3df51295faf3
+    commit: 9cc66b1aa90437a1e8017fec100b65a5d5533b56
     subdirs:
       - worldturtle
 
