@@ -57,7 +57,7 @@ main = runTurtle $ forward 90
 
 {-# START_FILE stack.yaml #-}
 
-resolver: lts-17.2
+resolver: lts-18.27
 
 extra-deps:
   - github: aneilmac/worldturtle-haskell
